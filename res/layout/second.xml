@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF" >
+
+    <TabHost
+        android:id="@+id/tabhost"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+            </TabWidget>
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <LinearLayout
+                    android:id="@+id/tab1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                     android:orientation="vertical"
+                      >
+              
+
+                    <Button
+                        android:id="@+id/bCanales"
+                        android:layout_width="match_parent"
+                        android:layout_height="75px"
+                        android:text="Canales"
+                        android:textColor="#FFFFFF" 
+                        android:background="@drawable/custom_button" 
+                        android:textSize="23dp"
+                        />
+                   
+				<View android:layout_width="2dip" android:layout_height="2dip"/>
+                    <Button
+                        android:id="@+id/bCategorias"
+                        android:layout_width="match_parent"
+                        android:layout_height="75px"
+                        android:text="Categorías" 
+                        android:textColor="#FFFFFF"
+                        android:onClick="onClickCat"  
+                        android:textSize="23dp"
+                        android:background="@drawable/custom_button" 
+                        />
+                <View android:layout_width="2dip" android:layout_height="2dip"/>
+
+                    <Button
+                        android:id="@+id/bFechayHora"
+                        android:layout_width="match_parent"
+                       android:layout_height="75px"
+                        android:text="Explorar Por Fecha"
+                        android:textColor="#FFFFFF" 
+                        android:background="@drawable/custom_button"  
+                        android:textSize="23dp"/>
+                    
+                    <View android:layout_width="2dip" android:layout_height="2dip"/>
+                    
+                     <Button
+                        android:id="@+id/bCPPV"
+                        android:layout_width="match_parent"
+                        android:layout_height="75px"
+                        android:text="Canales Pay Per View" 
+                        android:textColor="#FFFFFF"  
+                        android:background="@drawable/custom_button"
+                        android:onClick="traerCanalesPPV" 
+                        android:textSize="23dp" />
+                     
+                     <View android:layout_width="2dip" android:layout_height="2dip"/>
+                     
+                      <Button
+                        android:id="@+id/bPPPV"
+                        android:layout_width="match_parent"
+                        android:layout_height="75px"
+                        android:text="Programas Pay Per View" 
+                        android:textColor="#FFFFFF"  
+                        android:background="@drawable/custom_button"
+                        android:onClick="traerProgramasPPV" 
+                        android:textSize="23dp"  />
+                      
+                      <View android:layout_width="2dip" android:layout_height="2dip"/>
+
+                  
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tab2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+                    
+    <RelativeLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF" >
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="19dp"
+        android:src="@drawable/logotelmex" />
+
+   <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/imageView1"
+        android:layout_marginTop="31dp"
+        android:layout_weight="0.22" >
+
+        <AutoCompleteTextView
+            android:id="@+id/autoCompleteTextView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="14dp"
+            android:ems="10"
+            android:textColor="#000000" >
+
+            <requestFocus />
+        </AutoCompleteTextView>
+
+        <Button
+            android:id="@+id/buttonBuscar"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/autoCompleteTextView1"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="14dp"
+            android:layout_toRightOf="@+id/autoCompleteTextView1"
+            android:onClick="onClickBusqueda"
+            android:text="Buscar"
+            android:background="@drawable/custom_button" 
+            android:textColor="#FFFFFF" />
+		<RadioGroup android:id="@+id/RadioGroup1"
+            android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <RadioButton
+            android:id="@+id/radioButtonPrograma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="46dp"
+            android:text="Programa"
+            android:textColor="#0080FF" />
+
+        <RadioButton
+            android:id="@+id/radioButtonCanal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/radioButtonPrograma"
+            android:layout_marginTop="16dp"
+            android:text="Canal"
+            android:textColor="#0080FF" />
+</RadioGroup>
+
+    </RelativeLayout>
+
+</RelativeLayout>
+                    
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tab3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" 
+                      android:orientation="vertical"
+                     android:onClick="onClickCuenta">
+                     
+ <ScrollView
+    android:id="@+id/scroll"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent" >
+    
+  <LinearLayout
+   android:layout_width="fill_parent"
+   android:layout_height="wrap_content"
+   android:orientation="vertical">
+                    
+       <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:onClick="onClickMyVids" >
+
+        <TextView
+            android:id="@+id/textoVideos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="45dp"
+            android:text="   Mis  Videos   "
+            android:textAppearance="?android:attr/textAppearanceLarge" 
+            android:textColor="#0080FF" />
+
+        <ImageView
+            android:id="@+id/imageVideos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="28dp"
+            android:layout_toRightOf="@+id/textoVideos"
+            android:src="@drawable/videologo" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:onClick="onClickMyMusic" >
+        
+        <TextView
+            android:id="@+id/textoMusic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="45dp"
+            android:text="   Mi  Música   "
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#0080FF" />
+
+        <ImageView
+            android:id="@+id/imageMusic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="32dp"
+            android:layout_toRightOf="@+id/textoMusic"
+            android:src="@drawable/musicnotes" />
+
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:onClick="onClickInfo" >
+
+        <TextView
+            android:id="@+id/textoInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="38dp"
+            android:text="   Informacion   "
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#0080FF" />
+
+        <ImageView
+            android:id="@+id/imageInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="30dp"
+            android:layout_toRightOf="@+id/textoInfo"
+            android:src="@drawable/infoicon" />
+
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:onClick="onClickRequCall" >
+
+        <TextView
+            android:id="@+id/textoCall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="26dp"
+            android:text=" Solicitar llamada"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#0080FF" />
+
+        <ImageView
+            android:id="@+id/imageCall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@+id/textoCall"
+            android:src="@drawable/callreq" />
+
+    </RelativeLayout>
+    
+     <RelativeLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content" 
+        android:onClick="onClickPurchases" >
+
+         <TextView
+             android:id="@+id/textoCompras"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentLeft="true"
+             android:layout_centerVertical="true"
+             android:layout_marginLeft="45dp"
+             android:text="  Mis Compras   "
+             android:textAppearance="?android:attr/textAppearanceLarge"
+             android:textColor="#0080FF" />
+
+         <ImageView
+             android:id="@+id/imageCompras"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentTop="true"
+             android:layout_marginLeft="19dp"
+             android:layout_toRightOf="@+id/textoCompras"
+             android:src="@drawable/compras" />
+
+     </RelativeLayout>
+     
+     
+     <RelativeLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content" 
+        android:onClick="onClickRSS" >
+
+         <TextView
+             android:id="@+id/textoRSS"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentLeft="true"
+             android:layout_centerVertical="true"
+             android:layout_marginLeft="45dp"
+             android:text="  Suscripciones  "
+             android:textAppearance="?android:attr/textAppearanceLarge"
+             android:textColor="#0080FF" />
+
+         <ImageView
+             android:id="@+id/imageRSS"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentTop="true"
+             android:layout_marginLeft="24dp"
+             android:layout_toRightOf="@+id/textoRSS"
+             android:src="@drawable/news" />
+
+     </RelativeLayout>
+     
+     
+      
+     <RelativeLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+        android:onClick="onClickLogout" >
+
+         <TextView
+             android:id="@+id/textoLogout"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentLeft="true"
+             android:layout_centerVertical="true"
+             android:layout_marginLeft="45dp"
+             android:text="      Salir           "
+             android:textAppearance="?android:attr/textAppearanceLarge"
+             android:textColor="#0080FF" />
+
+         <ImageView
+             android:id="@+id/imageLogout"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentTop="true"
+             android:layout_marginLeft="49dp"
+             android:layout_toRightOf="@+id/textoLogout"
+             android:src="@drawable/lock" />
+
+     </RelativeLayout>
+                    
+                    
+                   
+                     
+                </LinearLayout>
+                 </ScrollView>
+                 </LinearLayout>
+                 
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+
+</RelativeLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.remote"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk android:minSdkVersion="10" />
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission> 
+ 	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name" android:theme="@android:style/Theme.Black.NoTitleBar">
+        <activity
+            android:name=".MainScreen" android:label="@string/app_name" android:configChanges="orientation" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>  
+         <activity android:name=".SecondScreen"   android:configChanges="orientation" android:screenOrientation="portrait"/>
+         <activity android:name=".BrowseCanales" android:configChanges="orientation" android:screenOrientation="portrait"/>
+         <activity android:name=".BrowseFecha" android:configChanges="orientation" android:screenOrientation="portrait"/>
+         <activity android:name=".InfoCuentaActivity"  android:configChanges="orientation" android:screenOrientation="portrait"/>
+         <activity android:name=".MiCuentaActivity"  android:configChanges="orientation" android:screenOrientation="portrait"/>
+         <activity android:name=".ExplorarActivity"  android:configChanges="orientation" android:screenOrientation="portrait"/>
+         <activity android:name=".ShowCategorias"  android:configChanges="orientation" android:screenOrientation="portrait"/>
+         <activity android:name=".ShowProgramas"  android:configChanges="orientation" android:screenOrientation="portrait"/>
+         <activity android:name=".ShowCanalesPPV"  android:configChanges="orientation" android:screenOrientation="portrait"/>
+         <activity android:name=".VerPrograma" android:configChanges="orientation" android:screenOrientation="portrait"/>
+         <activity android:name=".MyVideos"  android:configChanges="orientation" android:screenOrientation="portrait"/>                  
+         <activity android:name=".ViewVideo"  android:configChanges="orientation" android:screenOrientation="landscape" android:launchMode="singleInstance"/>  
+         <activity android:name=".PlayAudio"  android:configChanges="orientation" android:screenOrientation="portrait" android:launchMode="singleInstance"/> 
+         <activity android:name=".MyMusic" android:configChanges="orientation" android:screenOrientation="portrait"/>
+         <activity android:name=".Terminos" android:configChanges="orientation" android:screenOrientation="portrait"/>
+         <service android:name=".ServicioFTP" />
+    </application>
+
+</manifest>

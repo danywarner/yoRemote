@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, YoRemoteActivity!</string>
+    <string name="app_name">YoRemote</string>
+    <string name="service_created">service_created</string>
+    <string name="service_start_arguments_label">service_start_arguments_label</string>
+    <string name="terminos">El uso de esta aplicación móvil está sujeto a los términos actuales del Contrato de Licencia de Usuario Final (CLUF) de Telmex contenidas en http://www.telmex.com.co/wps/portal/co/pc2/hogares/ayuda/terminos-y-condiciones. Este producto ha sido desarrollado bajo la licencia Apache dado que sus componentes han sido desarrollados utilizando bibliotecas bajo la misma licencia. El uso de esta aplicación también está sujeto a la política de privacidad de Telmex vigente a la fecha de su publicación. Copyright © 2012 Telmex S.A. Los logos usados son propiedad de Telmex S.A. Todas las otras marcas son propiedad de sus respectivos dueños.</string>
+
+</resources>

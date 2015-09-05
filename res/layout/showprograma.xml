@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#81F7F3"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="23dp"
+        android:src="@drawable/itcrowd" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
+        android:text="The IT Crowd se desarrolla en las oficinas de Industrias Reynholm, una ficticia compañía situada en Londres. Se centra en las travesuras de tres miembros del departamento informático, situado en un desordenado, sucio y caótico sótano, que además contrasta fuertemente con las fantásticas vistas de Londres de las que disfruta el resto de la organización."
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imageView1"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@+id/imageView1"
+        android:text=" Temporada 1    Genero: Comedia   Lanzamiento: 2006 Precio: $9.999"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#000000" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imageView1"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="23dp"
+        android:text="Rentar" />
+
+    <Button
+        android:id="@+id/buttonDownload2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/button1"
+        android:layout_alignBottom="@+id/button1"
+        android:layout_marginLeft="14dp"
+        android:layout_toRightOf="@+id/button1"
+        android:text="Comprar" />
+
+    <Button
+        android:id="@+id/buttonDownload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/buttonDownload2"
+        android:layout_alignBottom="@+id/buttonDownload2"
+        android:layout_marginLeft="14dp"
+        android:layout_toRightOf="@+id/buttonDownload2"
+        android:onClick="onClickBuy"
+        android:text="Descargar" />
+
+</RelativeLayout>

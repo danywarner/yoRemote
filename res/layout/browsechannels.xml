@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="true"
+    android:orientation="vertical" 
+    android:background="#FFFFFF">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        
+         <Button
+                        android:id="@+id/todosCanales"
+                        android:layout_width="200px"
+                        android:layout_height="63px"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="5dp"
+                        android:text="Todos"
+                        android:textColor="#FFFFFF" 
+                        android:background="@drawable/custom_button" 
+                        android:textSize="20dp"
+                        />
+          <Button
+                        android:id="@+id/favCanales"
+                        android:layout_width="200px"
+                        android:layout_height="63px"
+                        android:layout_marginLeft="165dp"
+                        android:layout_marginTop="5dp"
+                        android:text="Favoritos"
+                        android:textColor="#FFFFFF" 
+                        android:background="@drawable/custom_button" 
+                        android:textSize="20dp"
+                        />
+    </RelativeLayout>
+
+  <ScrollView
+      android:id="@+id/scroll"
+      android:layout_width="fill_parent"
+      android:layout_height="match_parent" 
+      android:layout_marginTop="10dp">
+    
+  <LinearLayout
+      android:id="@+id/channelslistlayout"
+   android:layout_width="fill_parent"
+   android:layout_height="wrap_content"
+   android:orientation="vertical">
+   
+       </LinearLayout>
+       
+  </ScrollView>
+  </LinearLayout>
+      
+      
+      
+      
+      
